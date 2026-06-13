@@ -1,35 +1,699 @@
-    <section class="section" id="subunit-2-1-reading-2">
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Unit 2 · Education and Science Reading Practice</title>
+
+  <style>
+    :root {
+      --bg-1: #f5f3ff;
+      --bg-2: #eef2ff;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #111827;
+      --muted: #6b7280;
+      --purple: #6d28d9;
+      --purple-soft: #ede9fe;
+      --purple-border: #ddd6fe;
+      --blue: #2563eb;
+      --green: #15803d;
+      --red: #b91c1c;
+      --shadow: 0 18px 50px rgba(88, 28, 135, 0.12);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(196, 181, 253, 0.48), transparent 34%),
+        radial-gradient(circle at top right, rgba(191, 219, 254, 0.45), transparent 32%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    body.lang-kk [data-lang="ru"],
+    body.lang-ru [data-lang="kk"] {
+      display: none !important;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell,
+    .page-shell {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 22px 0 12px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(124, 58, 237, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 14px 35px rgba(88, 28, 135, 0.10);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      box-shadow: 0 10px 25px rgba(109, 40, 217, 0.24);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      min-width: 0;
+    }
+
+    .brand-text b {
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(237, 233, 254, 0.8);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .lang-btn {
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 900;
+      color: #4c1d95;
+      background: transparent;
+    }
+
+    .lang-btn.active {
+      background: #fff;
+      color: var(--purple);
+      box-shadow: 0 8px 20px rgba(88, 28, 135, 0.12);
+    }
+
+    .hero {
+      padding: 42px 0 22px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 38px;
+      padding: clamp(28px, 5vw, 54px);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(245, 243, 255, 0.9)),
+        radial-gradient(circle at right top, rgba(124, 58, 237, 0.18), transparent 35%);
+      border: 1px solid rgba(124, 58, 237, 0.16);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      bottom: -100px;
+      border-radius: 50%;
+      background: rgba(124, 58, 237, 0.12);
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 950;
+      font-size: 13px;
+      border: 1px solid var(--purple-border);
+    }
+
+    .hero h1 {
+      margin: 18px 0 14px;
+      max-width: 880px;
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      color: #1f1646;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-desc {
+      max-width: 760px;
+      color: #4b5563;
+      font-size: clamp(16px, 2.2vw, 20px);
+      line-height: 1.7;
+      font-weight: 650;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-stat {
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+    }
+
+    .mini-stat b {
+      display: block;
+      font-size: 22px;
+      color: var(--purple);
+      margin-bottom: 4px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .nav-section {
+      padding: 12px 0 24px;
+    }
+
+    .unit-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      box-shadow: 0 14px 36px rgba(88, 28, 135, 0.08);
+    }
+
+    .unit-nav a {
+      flex: 1 1 190px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(237, 233, 254, 0.58);
+      color: #312e81;
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      font-weight: 950;
+      line-height: 1.35;
+    }
+
+    .unit-nav small {
+      display: block;
+      margin-top: 4px;
+      color: #6b7280;
+      font-weight: 750;
+    }
+
+    .section {
+      padding: 24px 0;
+    }
+
+    .reading-block {
+      margin: 0 0 28px;
+      padding: clamp(18px, 3vw, 28px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid rgba(124, 58, 237, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .reading-header {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .reading-title-card,
+    .reading-info-card,
+    .text-card,
+    .task-card,
+    .vocab-card,
+    .strategy-card,
+    .content-card {
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(124, 58, 237, 0.13);
+      box-shadow: 0 12px 32px rgba(88, 28, 135, 0.08);
+    }
+
+    .reading-title-card,
+    .reading-info-card,
+    .text-card,
+    .task-card,
+    .vocab-card,
+    .strategy-card,
+    .content-card {
+      padding: 22px;
+    }
+
+    .reading-title-card h2 {
+      margin: 16px 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      color: #24164f;
+    }
+
+    .reading-translation {
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .reading-info-card p {
+      margin: 0;
+      line-height: 1.7;
+      color: #4b5563;
+      font-weight: 650;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card-title {
+      margin: 0 0 16px;
+      color: var(--purple);
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .reading-text {
+      padding: 20px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid rgba(124, 58, 237, 0.14);
+      line-height: 1.75;
+      color: #1f2937;
+      font-weight: 640;
+      font-size: 16px;
+    }
+
+    .reading-text p {
+      margin: 0 0 16px;
+    }
+
+    .reading-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .reading-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .level-badge {
+      display: inline-grid;
+      place-items: center;
+      min-width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 950;
+    }
+
+    .reading-heading {
+      font-weight: 950;
+      color: #1f2937;
+    }
+
+    .question {
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(249, 250, 251, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      margin-bottom: 16px;
+    }
+
+    .question p {
+      margin: 0 0 14px;
+      font-size: 17px;
+      font-weight: 950;
+      line-height: 1.45;
+      color: #111827;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 13px 14px;
+      border-radius: 17px;
+      background: white;
+      border: 1px solid rgba(124, 58, 237, 0.13);
+      cursor: pointer;
+      font-weight: 760;
+      line-height: 1.45;
+      color: #374151;
+    }
+
+    .option input {
+      margin-top: 3px;
+      flex: 0 0 auto;
+    }
+
+    .option.correct {
+      border-color: rgba(22, 163, 74, 0.55) !important;
+      background: rgba(240, 253, 244, 0.95) !important;
+      color: #14532d !important;
+    }
+
+    .option.wrong {
+      border-color: rgba(239, 68, 68, 0.45) !important;
+      background: rgba(254, 242, 242, 0.95) !important;
+      color: #7f1d1d !important;
+    }
+
+    .question-explanation {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(240, 253, 244, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+      color: #14532d;
+      line-height: 1.6;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .question-explanation.show {
+      display: block;
+    }
+
+    .check-btn {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      padding: 15px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      color: white;
+      font-size: 16px;
+      font-weight: 950;
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.22);
+    }
+
+    .result-box {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+      color: #14532d;
+      font-weight: 900;
+    }
+
+    .result-box.show {
+      display: block;
+    }
+
+    .score-line {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(240, 253, 244, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .vocab-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .vocab-row {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr 1fr;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(124, 58, 237, 0.1);
+      line-height: 1.45;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .vocab-row b {
+      color: #312e81;
+    }
+
+    .strategy-list {
+      margin: 0;
+      padding-left: 20px;
+      color: #374151;
+      line-height: 1.75;
+      font-weight: 700;
+    }
+
+    .strategy-list li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .reading-header,
+      .reading-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        border-radius: 24px;
+        align-items: flex-start;
+      }
+
+      .brand-text b {
+        white-space: normal;
+      }
+
+      .vocab-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-shell,
+      .page-shell {
+        width: min(100% - 18px, 1180px);
+      }
+
+      .hero-card,
+      .reading-block {
+        border-radius: 26px;
+      }
+
+      .text-card,
+      .task-card,
+      .vocab-card,
+      .strategy-card,
+      .reading-title-card,
+      .reading-info-card {
+        padding: 16px;
+      }
+
+      .reading-text {
+        padding: 16px;
+        font-size: 15px;
+      }
+
+      .question {
+        padding: 14px;
+      }
+
+      .option {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="lang-kk">
+  <header class="topbar">
+    <div class="site-shell">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">U2</div>
+          <div class="brand-text">
+            <b>Education and Science · Reading Practice</b>
+            <span>
+              <span class="inline-lang" data-lang="kk">Магистратураға дайындық</span>
+              <span class="inline-lang" data-lang="ru">Подготовка к магистратуре</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="lang-switch">
+          <button class="lang-btn active" type="button" data-set-lang="kk">KZ</button>
+          <button class="lang-btn" type="button" data-set-lang="ru">RU</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="site-shell">
+        <div class="hero-card">
+          <div class="section-kicker">Unit 2 · Education and Science</div>
+
+          <h1>
+            <span class="inline-lang" data-lang="kk">Білім және ғылым бойынша оқылым дайындығы</span>
+            <span class="inline-lang" data-lang="ru">Reading-подготовка по теме “Образование и наука”</span>
+          </h1>
+
+          <p class="hero-desc">
+            <span class="inline-lang" data-lang="kk">
+              Бұл сайт Unit 2 тақырыптарына арналған: университет өмірі, шетелде оқу,
+              ғылыми әдіс және зерттеу жұмысы. Әр reading ішінде 8 сұрақ, 5 жауап нұсқасы
+              және әр сұрақтың астында түсіндірме беріледі.
+            </span>
+            <span class="inline-lang" data-lang="ru">
+              Этот сайт посвящён Unit 2: университетская жизнь, обучение за рубежом,
+              научный метод и исследовательская работа. В каждом reading есть 8 вопросов,
+              5 вариантов ответа и объяснение под каждым вопросом.
+            </span>
+          </p>
+
+          <div class="hero-grid">
+            <div class="mini-stat"><b>3</b><span>current reading texts</span></div>
+            <div class="mini-stat"><b>24</b><span>IELTS-style questions</span></div>
+            <div class="mini-stat"><b>5</b><span>options per question</span></div>
+            <div class="mini-stat"><b>KZ/RU</b><span>language mode</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nav-section">
+      <div class="site-shell">
+        <nav class="unit-nav">
+          <a href="#subunit-2-1">
+            Unit 2.1
+            <small>
+              <span class="inline-lang" data-lang="kk">Университет өмірі</span>
+              <span class="inline-lang" data-lang="ru">Университетская жизнь</span>
+            </small>
+          </a>
+
+          <a href="#subunit-2-2">
+            Unit 2.2
+            <small>
+              <span class="inline-lang" data-lang="kk">Ғылыми жұмыс</span>
+              <span class="inline-lang" data-lang="ru">Научная работа</span>
+            </small>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="subunit-2-1">
       <div class="page-shell">
 
-        <!-- ================= UNIT 2.1 / READING 2 ================= -->
-        <div class="reading-block">
+        <div class="reading-block" id="subunit-2-1-reading-1">
           <div class="reading-header">
             <div class="reading-title-card">
-              <div class="section-kicker">Unit 2 · Subunit 1 · Reading 2</div>
-              <h2>Preparing for University Life Abroad</h2>
+              <div class="section-kicker">Unit 2 · Subunit 1 · Reading 1</div>
+              <h2>The University of Life</h2>
 
               <div class="reading-translation">
-                <span class="inline-lang" data-lang="kk">Шетелдегі университет өміріне дайындалу</span>
-                <span class="inline-lang" data-lang="ru">Подготовка к университетской жизни за рубежом</span>
+                <span class="inline-lang" data-lang="kk">Өмір университеті</span>
+                <span class="inline-lang" data-lang="ru">Университет жизни</span>
               </div>
             </div>
 
             <div class="reading-info-card">
               <div class="lang-content" data-lang="kk">
                 <p>
-                  Бұл reading мәтіні studying abroad (шетелде оқу), academic culture
-                  (академиялық мәдениет), independent study (өздігінен оқу), student support
-                  (студенттерге қолдау), budgeting (бюджет жоспарлау) және wellbeing
-                  (саулық, жақсы хал-жағдай) туралы.
+                  Бұл reading мәтіні gap year (оқу арасындағы үзіліс жылы), higher education
+                  (жоғары білім), voluntary work (ерікті жұмыс), vocational qualification
+                  (кәсіби біліктілік) және study motivation (оқуға ынта) туралы.
                 </p>
               </div>
 
               <div class="lang-content" data-lang="ru">
                 <p>
-                  Этот reading text о studying abroad (обучении за рубежом), academic culture
-                  (академической культуре), independent study (самостоятельной учёбе), student support
-                  (поддержке студентов), budgeting (планировании бюджета) и wellbeing
-                  (благополучии).
+                  Этот reading text о gap year (перерыве между школой и университетом),
+                  higher education (высшем образовании), voluntary work (волонтёрской работе),
+                  vocational qualification (профессиональной квалификации) и study motivation
+                  (мотивации к учёбе).
                 </p>
               </div>
             </div>
@@ -45,225 +709,200 @@
               <div class="reading-text">
                 <div class="reading-top">
                   <span class="level-badge">B1+</span>
-                  <span class="reading-heading">Reading Practice · Studying Abroad</span>
+                  <span class="reading-heading">Reading Practice · University Life</span>
                 </div>
 
-                <p><b>Topic:</b> Preparing for University Life Abroad</p>
+                <p><b>Topic:</b> The University of Life</p>
 
                 <p>
-                  Studying in another country can be exciting and life-changing, but it can also be
-                  challenging. International students do not only move to a new university; they also
-                  enter a new academic culture, a different social environment and, in many cases, a
-                  new way of living.
+                  The majority of eighteen-year-old students entering higher education go straight
+                  from school to university. For many school leavers, however, there is the irresistible
+                  attraction of the “gap year”, a time between school and university when they decide
+                  to experience something new, different or exciting.
                 </p>
 
                 <p>
-                  One important step is understanding the academic culture before arriving. In some
-                  countries, students are expected to discuss ideas openly with professors and classmates.
-                  In others, independent reading, research and self-study may be more important. Assessment
-                  methods can also vary: some courses depend mainly on final exams, while others include
-                  coursework, group projects, presentations and regular participation.
+                  Many of these so-called “gappers” go travelling around the world, often supplementing
+                  their limited funds by taking on casual work. Others may do voluntary work in a village
+                  in a distant part of the world. For the majority of gappers, the gap year is simply a
+                  chance to enjoy life as an independent adult for the first time.
                 </p>
 
                 <p>
-                  Students also need to prepare for practical parts of university life. Finding accommodation,
-                  managing money, using public transport and understanding university rules can take time.
-                  A realistic budget is especially important because rent, food, books, transport and health
-                  insurance may cost more than students expect.
+                  Increasingly, however, gap years are also proving a useful way of renewing a lapsed or
+                  weakening interest in education. They offer young people a chance to think about why
+                  they should study, or whether they need to study at all. A growing number of students,
+                  having taken a break after school, are heading back into further and higher education
+                  through a less direct route of working and gapping.
                 </p>
 
                 <p>
-                  Support systems can make the transition easier. Many universities offer orientation
-                  programmes, academic advisers, writing centres, counselling services and student clubs.
-                  These services help students ask questions, build confidence and avoid feeling isolated.
-                  Joining a club or study group can also help international students make friends and practise
-                  English in real situations.
+                  According to recent data from the British university admissions service, UCAS, 105,000
+                  students aged nineteen and 44,400 students aged twenty entered higher education last year.
+                  These figures show a steady annual increase in this age group over the previous three years.
                 </p>
 
                 <p>
-                  However, success abroad is not only about academic performance. Students need to look after
-                  their physical and mental wellbeing. Regular sleep, healthy food, exercise and time for rest
-                  can improve concentration and reduce stress. Asking for help early is not a sign of weakness;
-                  it is part of learning how to manage university life responsibly.
+                  Nineteen-year-old student Christine Samways is a typical example. She left school at sixteen
+                  with nine good exam passes at grades A to C, but she did not want to continue studying at
+                  the time. She was also worried that, despite having the qualities of a good student, she would
+                  find the challenges of higher education too great and would be forced to drop out.
                 </p>
 
                 <p>
-                  In short, studying abroad requires preparation beyond choosing a course. Students who understand
-                  academic expectations, manage practical challenges and use available support are more likely to
-                  adapt successfully and enjoy their university experience.
+                  Instead, Christine gained a vocational qualification in hairdressing. However, she quickly began
+                  to realise that it was not quite what she wanted and that going back into some kind of education
+                  could be her next step. Like many sixteen-year-old school leavers starting work for the first time,
+                  she understood that without qualifications, or without the right qualifications, people have fewer
+                  work choices.
+                </p>
+
+                <p>
+                  “The things that you want to do just are not available to you,” she says. Her experience shows that
+                  a break from formal study does not always mean turning away from education. For some young people,
+                  time spent working, travelling or volunteering can help them return to study with a clearer sense
+                  of purpose.
                 </p>
               </div>
             </article>
 
-            <article class="task-card" data-test="studying-abroad-reading-2">
-              <h3 class="card-title">Reading 2 · Questions</h3>
+            <article class="task-card" data-test="university-life-reading-1">
+              <h3 class="card-title">Reading 1 · Questions</h3>
 
-              <div class="question" data-answer="d">
+              <div class="question" data-answer="c">
                 <p>1. What is the main idea of the passage?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q1" value="a"> A. Studying abroad is only about choosing a famous university</label>
-                  <label class="option"><input type="radio" name="sa-r2-q1" value="b"> B. International students should avoid asking for help</label>
-                  <label class="option"><input type="radio" name="sa-r2-q1" value="c"> C. Academic performance is the only important part of student life</label>
-                  <label class="option"><input type="radio" name="sa-r2-q1" value="d"> D. Successful study abroad requires academic, practical and personal preparation</label>
-                  <label class="option"><input type="radio" name="sa-r2-q1" value="e"> E. University life abroad is impossible without perfect English</label>
+                  <label class="option"><input type="radio" name="ul-r1-q1" value="a"> A. All students should avoid university after school</label>
+                  <label class="option"><input type="radio" name="ul-r1-q1" value="b"> B. Travelling is more useful than any kind of education</label>
+                  <label class="option"><input type="radio" name="ul-r1-q1" value="c"> C. A gap year can help some students return to education with clearer purpose</label>
+                  <label class="option"><input type="radio" name="ul-r1-q1" value="d"> D. Higher education is becoming less popular among young people</label>
+                  <label class="option"><input type="radio" name="ul-r1-q1" value="e"> E. Vocational qualifications always replace university degrees</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>D</b> дұрыс. Main idea (негізгі ой) — studying abroad тек course таңдау емес; academic culture, budgeting, support және wellbeing дайындықтарын қажет етеді.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>D</b> правильно. Main idea (главная мысль): studying abroad требует не только выбора course, но и подготовки к academic culture, budgeting, support и wellbeing.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Main idea (негізгі ой) — gap year кейбір студенттерге education туралы ойланып, оқуға нақты purpose арқылы қайтуға көмектеседі.</div>
+                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Main idea (главная мысль): gap year помогает некоторым students вернуться к education с более clear purpose.</div>
                 </div>
               </div>
 
               <div class="question" data-answer="b">
-                <p>2. What challenge do international students face besides entering a new university?</p>
+                <p>2. What is a “gap year” according to the passage?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q2" value="a"> A. They must stop communicating with classmates</label>
-                  <label class="option"><input type="radio" name="sa-r2-q2" value="b"> B. They enter a new academic culture and social environment</label>
-                  <label class="option"><input type="radio" name="sa-r2-q2" value="c"> C. They are not allowed to join student clubs</label>
-                  <label class="option"><input type="radio" name="sa-r2-q2" value="d"> D. They study only from home and never meet teachers</label>
-                  <label class="option"><input type="radio" name="sa-r2-q2" value="e"> E. They do not need to understand university rules</label>
+                  <label class="option"><input type="radio" name="ul-r1-q2" value="a"> A. A year when students study only online</label>
+                  <label class="option"><input type="radio" name="ul-r1-q2" value="b"> B. A period between school and university used for new experiences</label>
+                  <label class="option"><input type="radio" name="ul-r1-q2" value="c"> C. A university course for older teachers</label>
+                  <label class="option"><input type="radio" name="ul-r1-q2" value="d"> D. A compulsory year of exams before school finishes</label>
+                  <label class="option"><input type="radio" name="ul-r1-q2" value="e"> E. A year when students are not allowed to work</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): мәтінде students enter a new academic culture, social environment және new way of living деп берілген.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. Specific detail (точная информация): students enter a new academic culture, social environment and a new way of living.
-                  </div>
-                </div>
-              </div>
-
-              <div class="question" data-answer="a">
-                <p>3. Why should students understand academic culture before arriving?</p>
-                <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q3" value="a"> A. Teaching styles and assessment methods can differ between countries</label>
-                  <label class="option"><input type="radio" name="sa-r2-q3" value="b"> B. All universities use exactly the same system</label>
-                  <label class="option"><input type="radio" name="sa-r2-q3" value="c"> C. Professors never expect students to discuss ideas</label>
-                  <label class="option"><input type="radio" name="sa-r2-q3" value="d"> D. Final exams are forbidden in English-speaking countries</label>
-                  <label class="option"><input type="radio" name="sa-r2-q3" value="e"> E. Academic culture is not connected with student success</label>
-                </div>
-
-                <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Мәтінде discussion, independent study және assessment methods әр елде әртүрлі болуы мүмкін деп түсіндіріледі.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. В тексте говорится, что discussion, independent study и assessment methods могут отличаться в разных странах.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Definition (анықтама): gap year — school мен university арасындағы уақыт, онда жастар жаңа experience алады.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Definition (определение): gap year — время между school и university для new experiences.</div>
                 </div>
               </div>
 
               <div class="question" data-answer="e">
-                <p>4. What does the word “assessment” mean in the passage?</p>
+                <p>3. Why do some gappers take casual work while travelling?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q4" value="a"> A. Student accommodation</label>
-                  <label class="option"><input type="radio" name="sa-r2-q4" value="b"> B. A type of public transport</label>
-                  <label class="option"><input type="radio" name="sa-r2-q4" value="c"> C. A social club for international students</label>
-                  <label class="option"><input type="radio" name="sa-r2-q4" value="d"> D. A university building</label>
-                  <label class="option"><input type="radio" name="sa-r2-q4" value="e"> E. The way students’ work and learning are evaluated</label>
+                  <label class="option"><input type="radio" name="ul-r1-q3" value="a"> A. To avoid meeting people from other countries</label>
+                  <label class="option"><input type="radio" name="ul-r1-q3" value="b"> B. To replace all forms of education permanently</label>
+                  <label class="option"><input type="radio" name="ul-r1-q3" value="c"> C. To become university admissions officers</label>
+                  <label class="option"><input type="radio" name="ul-r1-q3" value="d"> D. To stop themselves from becoming independent adults</label>
+                  <label class="option"><input type="radio" name="ul-r1-q3" value="e"> E. To add to their limited funds</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>E</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): assessment methods include final exams, coursework, group projects және presentations.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>E</b> правильно. Vocabulary in context (значение по контексту): assessment methods include final exams, coursework, group projects and presentations.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Specific detail (нақты ақпарат): gappers limited funds-ты supplementing үшін casual work алады.</div>
+                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. Specific detail (точная информация): gappers take casual work to supplement their limited funds.</div>
                 </div>
               </div>
 
-              <div class="question" data-answer="c">
-                <p>5. What can be inferred about budgeting from the passage?</p>
+              <div class="question" data-answer="a">
+                <p>4. What does the word “reinvigorating” mean in the passage?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q5" value="a"> A. Budgeting is unnecessary if students live abroad</label>
-                  <label class="option"><input type="radio" name="sa-r2-q5" value="b"> B. Students should spend money without planning</label>
-                  <label class="option"><input type="radio" name="sa-r2-q5" value="c"> C. Students may face higher living costs than they expect</label>
-                  <label class="option"><input type="radio" name="sa-r2-q5" value="d"> D. Rent and food are always free for international students</label>
-                  <label class="option"><input type="radio" name="sa-r2-q5" value="e"> E. Books and transport are never part of student expenses</label>
+                  <label class="option"><input type="radio" name="ul-r1-q4" value="a"> A. Renewing or giving new energy to something</label>
+                  <label class="option"><input type="radio" name="ul-r1-q4" value="b"> B. Completely removing an interest in education</label>
+                  <label class="option"><input type="radio" name="ul-r1-q4" value="c"> C. Making university entrance impossible</label>
+                  <label class="option"><input type="radio" name="ul-r1-q4" value="d"> D. Replacing study with permanent travel</label>
+                  <label class="option"><input type="radio" name="ul-r1-q4" value="e"> E. Forgetting previous school experience</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>C</b> дұрыс. Inference (қорытынды жасау): мәтінде rent, food, books, transport және health insurance students expect-тен қымбат болуы мүмкін делінген.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>C</b> правильно. Inference (вывод): rent, food, books, transport and health insurance may cost more than students expect.
-                  </div>
-                </div>
-              </div>
-
-              <div class="question" data-answer="b">
-                <p>6. How can university support systems help students?</p>
-                <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q6" value="a"> A. They remove the need to study independently</label>
-                  <label class="option"><input type="radio" name="sa-r2-q6" value="b"> B. They help students ask questions, build confidence and avoid isolation</label>
-                  <label class="option"><input type="radio" name="sa-r2-q6" value="c"> C. They replace all academic courses</label>
-                  <label class="option"><input type="radio" name="sa-r2-q6" value="d"> D. They make students avoid English practice</label>
-                  <label class="option"><input type="radio" name="sa-r2-q6" value="e"> E. They are useful only after students finish university</label>
-                </div>
-
-                <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): support systems students-ке ask questions, build confidence және avoid feeling isolated көмектеседі.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. Specific detail (точная информация): support systems help students ask questions, build confidence and avoid feeling isolated.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): reinvigorating — әлсіреген interest-ті қайта күшейту.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Vocabulary in context (значение по контексту): reinvigorating means renewing or giving new energy.</div>
                 </div>
               </div>
 
               <div class="question" data-answer="d">
-                <p>7. What is the writer’s attitude toward asking for help early?</p>
+                <p>5. What do the UCAS figures suggest?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q7" value="a"> A. It shows that students are not ready for university</label>
-                  <label class="option"><input type="radio" name="sa-r2-q7" value="b"> B. It should be avoided because it creates weakness</label>
-                  <label class="option"><input type="radio" name="sa-r2-q7" value="c"> C. It is useful only for students who do not study</label>
-                  <label class="option"><input type="radio" name="sa-r2-q7" value="d"> D. It is a responsible way to manage university life</label>
-                  <label class="option"><input type="radio" name="sa-r2-q7" value="e"> E. It is less important than ignoring stress</label>
+                  <label class="option"><input type="radio" name="ul-r1-q5" value="a"> A. Fewer nineteen- and twenty-year-olds are entering higher education</label>
+                  <label class="option"><input type="radio" name="ul-r1-q5" value="b"> B. Only eighteen-year-olds can enter higher education</label>
+                  <label class="option"><input type="radio" name="ul-r1-q5" value="c"> C. Students over twenty are banned from university</label>
+                  <label class="option"><input type="radio" name="ul-r1-q5" value="d"> D. More students are entering higher education after a break</label>
+                  <label class="option"><input type="radio" name="ul-r1-q5" value="e"> E. University admissions have stopped collecting data</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>D</b> дұрыс. Author’s attitude (автордың көзқарасы): asking for help early weakness емес, university life-ты responsibly manage ету бөлігі.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>D</b> правильно. Author’s attitude (позиция автора): asking for help early is not weakness, but part of managing university life responsibly.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Inference (қорытынды): 19 және 20 жастағы students higher education-ға көбірек кіріп жатыр.</div>
+                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Inference (вывод): рост числа 19- и 20-летних students показывает return to higher education after a break.</div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>6. Why did Christine Samways not continue studying immediately after school?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ul-r1-q6" value="a"> A. She had failed all her school exams</label>
+                  <label class="option"><input type="radio" name="ul-r1-q6" value="b"> B. She had already completed a university degree</label>
+                  <label class="option"><input type="radio" name="ul-r1-q6" value="c"> C. She did not want to study then and feared higher education might be too challenging</label>
+                  <label class="option"><input type="radio" name="ul-r1-q6" value="d"> D. She was not allowed to gain a vocational qualification</label>
+                  <label class="option"><input type="radio" name="ul-r1-q6" value="e"> E. She believed qualifications had no connection with work choices</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Christine did not want to continue studying және higher education challenges too great болуы мүмкін деп worried болды.</div>
+                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Christine did not want to continue studying and worried that higher education challenges would be too great.</div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>7. What did Christine realise after gaining a hairdressing qualification?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ul-r1-q7" value="a"> A. Hairdressing was exactly what she wanted forever</label>
+                  <label class="option"><input type="radio" name="ul-r1-q7" value="b"> B. She might need to return to education to get better work choices</label>
+                  <label class="option"><input type="radio" name="ul-r1-q7" value="c"> C. Qualifications reduce all career opportunities</label>
+                  <label class="option"><input type="radio" name="ul-r1-q7" value="d"> D. Working first makes education unnecessary for everyone</label>
+                  <label class="option"><input type="radio" name="ul-r1-q7" value="e"> E. University is useful only for people without exam passes</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Christine right qualifications болмаса fewer work choices болатынын түсінді.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Christine realised that without the right qualifications people have fewer work choices.</div>
                 </div>
               </div>
 
               <div class="question" data-answer="a">
                 <p>8. Which title best matches the passage?</p>
                 <div class="options">
-                  <label class="option"><input type="radio" name="sa-r2-q8" value="a"> A. How to Adapt to University Life in Another Country</label>
-                  <label class="option"><input type="radio" name="sa-r2-q8" value="b"> B. Why Students Should Avoid Studying Abroad</label>
-                  <label class="option"><input type="radio" name="sa-r2-q8" value="c"> C. The History of University Buildings</label>
-                  <label class="option"><input type="radio" name="sa-r2-q8" value="d"> D. Public Transport Rules for Tourists</label>
-                  <label class="option"><input type="radio" name="sa-r2-q8" value="e"> E. Why Coursework Is Always Easier Than Exams</label>
+                  <label class="option"><input type="radio" name="ul-r1-q8" value="a"> A. Gap Years and a New Sense of Educational Purpose</label>
+                  <label class="option"><input type="radio" name="ul-r1-q8" value="b"> B. Why School Leavers Should Never Work</label>
+                  <label class="option"><input type="radio" name="ul-r1-q8" value="c"> C. The History of Hairdressing Qualifications</label>
+                  <label class="option"><input type="radio" name="ul-r1-q8" value="d"> D. How UCAS Stopped University Admissions</label>
+                  <label class="option"><input type="radio" name="ul-r1-q8" value="e"> E. Travelling as a Replacement for All Study</label>
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Best title (ең лайық тақырып) мәтіннің барлық бөлігін қамтиды: academic culture, practical challenges, support және wellbeing.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. Best title (лучшее название) охватывает весь текст: academic culture, practical challenges, support and wellbeing.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Best title (ең лайық тақырып) gap year, education-ға қайта оралу және purpose идеясын қамтиды.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Best title (лучшее название) охватывает gap year, return to education and purpose.</div>
                 </div>
               </div>
 
-              <button class="check-btn" type="button" data-check="studying-abroad-reading-2">
+              <button class="check-btn" type="button" data-check="university-life-reading-1">
                 <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
                 <span class="inline-lang" data-lang="ru">Проверить ответы</span>
               </button>
 
-              <div class="result-box" data-result="studying-abroad-reading-2">
+              <div class="result-box" data-result="university-life-reading-1">
                 <div class="score-placeholder"></div>
               </div>
             </article>
@@ -272,88 +911,39 @@
           <div class="support-grid">
             <article class="vocab-card">
               <h3 class="card-title">Vocabulary</h3>
-
               <div class="vocab-grid">
-                <div class="vocab-row">
-                  <b>studying abroad</b>
-                  <span>шетелде оқу</span>
-                  <span>обучение за рубежом</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>academic culture</b>
-                  <span>академиялық мәдениет</span>
-                  <span>академическая культура</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>independent study</b>
-                  <span>өздігінен оқу</span>
-                  <span>самостоятельная учёба</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>assessment</b>
-                  <span>бағалау</span>
-                  <span>оценивание</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>accommodation</b>
-                  <span>тұратын орын</span>
-                  <span>жильё</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>budgeting</b>
-                  <span>бюджет жоспарлау</span>
-                  <span>планирование бюджета</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>student support</b>
-                  <span>студенттерге қолдау</span>
-                  <span>поддержка студентов</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>wellbeing</b>
-                  <span>саулық, жақсы хал-жағдай</span>
-                  <span>благополучие</span>
-                </div>
+                <div class="vocab-row"><b>higher education</b><span>жоғары білім</span><span>высшее образование</span></div>
+                <div class="vocab-row"><b>school leaver</b><span>мектеп бітіруші</span><span>выпускник школы</span></div>
+                <div class="vocab-row"><b>gap year</b><span>оқу арасындағы үзіліс жылы</span><span>год перерыва перед университетом</span></div>
+                <div class="vocab-row"><b>voluntary work</b><span>ерікті жұмыс</span><span>волонтёрская работа</span></div>
+                <div class="vocab-row"><b>casual work</b><span>уақытша жұмыс</span><span>временная работа</span></div>
+                <div class="vocab-row"><b>vocational qualification</b><span>кәсіби біліктілік</span><span>профессиональная квалификация</span></div>
+                <div class="vocab-row"><b>drop out</b><span>оқуды тастау</span><span>бросить учёбу</span></div>
+                <div class="vocab-row"><b>sense of purpose</b><span>мақсат сезімі</span><span>ощущение цели</span></div>
               </div>
             </article>
 
             <article class="strategy-card">
               <h3 class="card-title">Reading strategy</h3>
-
               <div class="lang-content" data-lang="kk">
                 <ul class="strategy-list">
-                  <li>Main idea (негізгі ой) сұрағында мәтіндегі барлық факторды біріктір: academic culture, practical life, support, wellbeing.</li>
-                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында мысалдарға қара: assessment methods дегеннен кейін exams, coursework, projects беріледі.</li>
-                  <li>Inference (қорытынды жасау) сұрағында тура сөйлемді емес, мәтіндегі логикалық байланысты таңда.</li>
-                  <li>Author’s attitude (автордың көзқарасы) сұрағында автордың бағалауын байқа: asking for help weakness емес, responsible action.</li>
+                  <li>Main idea (негізгі ой) сұрағында жеке story емес, бүкіл passage (мәтін) идеясын таңда.</li>
+                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) үшін сөздің алдындағы және кейінгі сөйлемді оқы.</li>
+                  <li>Inference (қорытынды жасау) сұрағында figures (сандар) не көрсетіп тұрғанын түсін.</li>
                 </ul>
               </div>
-
               <div class="lang-content" data-lang="ru">
                 <ul class="strategy-list">
-                  <li>В main idea (главная мысль) объединяй все факторы текста: academic culture, practical life, support, wellbeing.</li>
-                  <li>В vocabulary in context (значение по контексту) смотри на примеры: после assessment methods идут exams, coursework, projects.</li>
-                  <li>В inference (вывод) выбирай не прямую фразу, а логическую связь в тексте.</li>
-                  <li>В author’s attitude (позиция автора) замечай оценку автора: asking for help — не weakness, а responsible action.</li>
+                  <li>В main idea (главная мысль) выбирай не отдельную story, а идею всего passage (текста).</li>
+                  <li>Для vocabulary in context (значение по контексту) читай предложение до и после нужного слова.</li>
+                  <li>В inference (вывод) понимай, что показывают figures (цифры).</li>
                 </ul>
               </div>
             </article>
           </div>
         </div>
-      </div>
-    </section>
-        <section class="section" id="subunit-2-1-reading-2">
-      <div class="page-shell">
 
-        <!-- ================= UNIT 2.1 / READING 2 ================= -->
-        <div class="reading-block">
+        <div class="reading-block" id="subunit-2-1-reading-2">
           <div class="reading-header">
             <div class="reading-title-card">
               <div class="section-kicker">Unit 2 · Subunit 1 · Reading 2</div>
@@ -374,7 +964,6 @@
                   (экономикалық факторлар) туралы.
                 </p>
               </div>
-
               <div class="lang-content" data-lang="ru">
                 <p>
                   Этот reading text о studying English abroad (изучении английского за рубежом),
@@ -446,19 +1035,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q1" value="d"> D. Choices about studying English abroad are shaped by economic, cultural and national factors</label>
                   <label class="option"><input type="radio" name="ea-r2-q1" value="e"> E. Students never consider their parents’ opinions when studying abroad</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>D</b> дұрыс. Main idea (негізгі ой) — students’ choice of destination (оқу елін таңдау) economic factors, preconceptions, business connections және U.S. culture арқылы қалыптасады.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>D</b> правильно. Main idea (главная мысль): students’ choice of destination зависит от economic factors, preconceptions, business connections и U.S. culture.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Main idea (негізгі ой) — destination choice economic factors, preconceptions, business connections және U.S. culture арқылы қалыптасады.</div>
+                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Main idea (главная мысль): choice of destination зависит от economic factors, preconceptions, business connections and U.S. culture.</div>
                 </div>
               </div>
 
               <div class="question" data-answer="b">
-                <p>2. Which countries are listed as the five most popular destinations for studying English abroad?</p>
+                <p>2. Which countries are listed as the five most popular destinations?</p>
                 <div class="options">
                   <label class="option"><input type="radio" name="ea-r2-q2" value="a"> A. Britain, Germany, France, Canada and Ireland</label>
                   <label class="option"><input type="radio" name="ea-r2-q2" value="b"> B. The United States, Britain, Australia, New Zealand and Canada</label>
@@ -466,14 +1050,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q2" value="d"> D. Canada, Ireland, India, Britain and South Africa</label>
                   <label class="option"><input type="radio" name="ea-r2-q2" value="e"> E. The United States, Japan, Brazil, Canada and France</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): мәтінде five most popular destinations ретінде the United States, Britain, Australia, New Zealand and Canada берілген.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. Specific detail (точная информация): five most popular destinations — the United States, Britain, Australia, New Zealand and Canada.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Мәтінде five most popular destinations ретінде United States, Britain, Australia, New Zealand and Canada берілген.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Five most popular destinations: United States, Britain, Australia, New Zealand and Canada.</div>
                 </div>
               </div>
 
@@ -486,14 +1065,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q3" value="d"> D. The weather only</label>
                   <label class="option"><input type="radio" name="ea-r2-q3" value="e"> E. The distance from the student’s school</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Мәтінде country of choice depends to a large extent on economic factors деп нақты жазылған.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. В тексте прямо сказано: country of choice depends to a large extent on economic factors.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Country of choice depends to a large extent on economic factors.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Country of choice depends to a large extent on economic factors.</div>
                 </div>
               </div>
 
@@ -506,14 +1080,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q4" value="d"> D. The exact cost of each course</label>
                   <label class="option"><input type="radio" name="ea-r2-q4" value="e"> E. Ideas or opinions formed before direct experience</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>E</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): preconceptions — students and parents ел туралы алдын ала қалыптастырған ideas (ойлар) немесе opinions (пікірлер).
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>E</b> правильно. Vocabulary in context (значение по контексту): preconceptions — это ideas или opinions о стране, сформированные до личного опыта.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Preconceptions — ел туралы алдын ала қалыптасқан ideas немесе opinions.</div>
+                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. Preconceptions — ideas or opinions about a country before direct experience.</div>
                 </div>
               </div>
 
@@ -526,14 +1095,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q5" value="d"> D. Parents never have preconceptions about other countries</label>
                   <label class="option"><input type="radio" name="ea-r2-q5" value="e"> E. Parents only consider climate when choosing a country</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>C</b> дұрыс. Inference (қорытынды жасау): мәтінде parents’ preconceptions amount they are prepared to spend-ке influence етеді деп айтылады.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>C</b> правильно. Inference (вывод): parents’ preconceptions influence the amount they are prepared to spend.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Parents’ preconceptions amount they are prepared to spend-ке әсер етеді.</div>
+                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Parents’ preconceptions influence the amount they are prepared to spend.</div>
                 </div>
               </div>
 
@@ -546,14 +1110,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q6" value="d"> D. They replace the need for English language classes</label>
                   <label class="option"><input type="radio" name="ea-r2-q6" value="e"> E. They prove that national patterns do not exist</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Мәтінде international business connections gives a good indication of where students will seek tuition деп жазылған.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. В тексте сказано: international business connections give a good indication of where students will seek tuition.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. International business connections students will seek tuition қайда екенін көрсетеді.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. International business connections indicate where students will seek tuition.</div>
                 </div>
               </div>
 
@@ -566,14 +1125,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q7" value="d"> D. A diverse mixture of nationalities</label>
                   <label class="option"><input type="radio" name="ea-r2-q7" value="e"> E. A single traditional pattern of study</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>D</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): heterogeneity сөзі “most diverse range of nationalities” деген тіркеспен байланысты.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>D</b> правильно. Vocabulary in context (значение по контексту): heterogeneity связано с “most diverse range of nationalities”.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Heterogeneity “most diverse range of nationalities” дегенге қатысты.</div>
+                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Heterogeneity refers to “most diverse range of nationalities”.</div>
                 </div>
               </div>
 
@@ -586,14 +1140,9 @@
                   <label class="option"><input type="radio" name="ea-r2-q8" value="d"> D. Because American English is never taught in schools</label>
                   <label class="option"><input type="radio" name="ea-r2-q8" value="e"> E. Because it has no connection with international business</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Мәтінде U.S. classrooms diverse болуы оның foremost economy ретіндегі pulling power-ына, U.S. culture focus-қа және American English пен accent ерте оқытылуына байланысты.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. В тексте diverse classrooms объясняются foremost economy, focus on U.S. culture и ранним знакомством с American English and accent.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. U.S. economy, U.S. culture және American English-ке early exposure осыған әсер етеді.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. U.S. economy, U.S. culture and early exposure to American English explain this.</div>
                 </div>
               </div>
 
@@ -611,76 +1160,32 @@
           <div class="support-grid">
             <article class="vocab-card">
               <h3 class="card-title">Vocabulary</h3>
-
               <div class="vocab-grid">
-                <div class="vocab-row">
-                  <b>international student</b>
-                  <span>халықаралық студент</span>
-                  <span>международный студент</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>destination</b>
-                  <span>баратын ел, бағыт</span>
-                  <span>направление, страна назначения</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>economic factors</b>
-                  <span>экономикалық факторлар</span>
-                  <span>экономические факторы</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>preconception</b>
-                  <span>алдын ала қалыптасқан пікір</span>
-                  <span>предвзятое / заранее сложившееся мнение</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>outlay</b>
-                  <span>жұмсалатын ақша</span>
-                  <span>расход, сумма затрат</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>tuition</b>
-                  <span>оқыту, оқу ақысы контекстке байланысты</span>
-                  <span>обучение / плата за обучение по контексту</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>heterogeneity</b>
-                  <span>әртүрлілік, көптүрлі құрам</span>
-                  <span>разнородность, разнообразный состав</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>accent</b>
-                  <span>акцент, айтылым ерекшелігі</span>
-                  <span>акцент, особенности произношения</span>
-                </div>
+                <div class="vocab-row"><b>international student</b><span>халықаралық студент</span><span>международный студент</span></div>
+                <div class="vocab-row"><b>destination</b><span>баратын ел, бағыт</span><span>направление, страна назначения</span></div>
+                <div class="vocab-row"><b>economic factors</b><span>экономикалық факторлар</span><span>экономические факторы</span></div>
+                <div class="vocab-row"><b>preconception</b><span>алдын ала қалыптасқан пікір</span><span>заранее сложившееся мнение</span></div>
+                <div class="vocab-row"><b>outlay</b><span>жұмсалатын ақша</span><span>расход, сумма затрат</span></div>
+                <div class="vocab-row"><b>tuition</b><span>оқыту, оқу ақысы</span><span>обучение / плата за обучение</span></div>
+                <div class="vocab-row"><b>heterogeneity</b><span>әртүрлілік</span><span>разнородность</span></div>
+                <div class="vocab-row"><b>accent</b><span>акцент</span><span>акцент</span></div>
               </div>
             </article>
 
             <article class="strategy-card">
               <h3 class="card-title">Reading strategy</h3>
-
               <div class="lang-content" data-lang="kk">
                 <ul class="strategy-list">
                   <li>Main idea (негізгі ой) сұрағында destination choice (оқу елін таңдау) қандай факторларға байланысты екенін анықта.</li>
                   <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында difficult word (қиын сөз) алдындағы және кейінгі сөйлемге қара.</li>
-                  <li>Inference (қорытынды жасау) сұрағында parents, money және preconceptions арасындағы логикалық байланысты тап.</li>
-                  <li>Cause-effect (себеп-салдар байланысы) сұрағында due to (байланысты), influence (әсер ету), resulting (нәтижесінде) сөздерін белгіле.</li>
+                  <li>Inference (қорытынды жасау) сұрағында parents, money және preconceptions арасындағы байланысты тап.</li>
                 </ul>
               </div>
-
               <div class="lang-content" data-lang="ru">
                 <ul class="strategy-list">
                   <li>В main idea (главная мысль) определи, от каких факторов зависит destination choice (выбор страны обучения).</li>
                   <li>В vocabulary in context (значение по контексту) смотри на предложение до и после difficult word (сложного слова).</li>
-                  <li>В inference (вывод) найди логическую связь между parents, money и preconceptions.</li>
-                  <li>В cause-effect (причинно-следственная связь) отмечай due to (из-за), influence (влиять), resulting (в результате).</li>
+                  <li>В inference (вывод) найди связь между parents, money и preconceptions.</li>
                 </ul>
               </div>
             </article>
@@ -688,10 +1193,9 @@
         </div>
       </div>
     </section>
+
     <section class="section" id="subunit-2-2">
       <div class="page-shell">
-
-        <!-- ================= UNIT 2.2 / READING 1 ================= -->
         <div class="reading-block" id="subunit-2-2-reading-1">
           <div class="reading-header">
             <div class="reading-title-card">
@@ -712,7 +1216,6 @@
                   (гипотетикалық-дедуктивті әдіс), prediction (болжам) және testing (тексеру) туралы.
                 </p>
               </div>
-
               <div class="lang-content" data-lang="ru">
                 <p>
                   Этот reading text о scientific method (научном методе), hypothesis (гипотезе),
@@ -798,14 +1301,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q1" value="d"> D. Observation is always independent from previous experience</label>
                   <label class="option"><input type="radio" name="sm-r1-q1" value="e"> E. The inductive method has solved every problem in science</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>C</b> дұрыс. Main idea (негізгі ой) — scientific work көбіне hypothesis (гипотеза) арқылы басталады; ол observation (бақылау) мен method (әдіс) таңдауға әсер етеді және testing (тексеру) арқылы дәлелденуі керек.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>C</b> правильно. Main idea (главная мысль): scientific work часто начинается с hypothesis (гипотезы), которая направляет observation (наблюдение) и method (метод), а затем проверяется через testing (проверку).
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Main idea (негізгі ой) — scientific work көбіне hypothesis арқылы басталады, observation мен method таңдауға әсер етеді және testing арқылы тексеріледі.</div>
+                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Main idea (главная мысль): scientific work often begins with hypothesis, guides observation and method, and must be tested.</div>
                 </div>
               </div>
 
@@ -818,14 +1316,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q2" value="d"> D. They are the same as final scientific proof</label>
                   <label class="option"><input type="radio" name="sm-r1-q2" value="e"> E. They are used only after all experiments are finished</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Мәтінде hypotheses imaginative and inspiring деп сипатталады, өйткені олар researchers-ке known facts (белгілі фактілер) шегінен тыс ойлауға мүмкіндік береді.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. В тексте hypotheses описаны как imaginative and inspiring, потому что они помогают researchers мыслить beyond known facts (за пределами известных фактов).
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Hypotheses imaginative and inspiring деп сипатталады.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Hypotheses are described as imaginative and inspiring.</div>
                 </div>
               </div>
 
@@ -838,14 +1331,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q3" value="d"> D. That scientific theories cannot change over time</label>
                   <label class="option"><input type="radio" name="sm-r1-q3" value="e"> E. That scientific theory begins with purely unbiased observation and facts</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>E</b> дұрыс. Specific detail (нақты ақпарат): myth бойынша scientific theory simple, unbiased және impartial observation арқылы басталады деп саналады.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>E</b> правильно. Specific detail (точная информация): myth утверждает, что scientific theory начинается с simple, unbiased and impartial observation.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Myth бойынша scientific theory unbiased observation және facts арқылы басталады деп саналады.</div>
+                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. The myth says scientific theory begins with unbiased observation and facts.</div>
                 </div>
               </div>
 
@@ -858,14 +1346,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q4" value="d"> D. Observation done without any method or purpose</label>
                   <label class="option"><input type="radio" name="sm-r1-q4" value="e"> E. Observation that happens only after a hypothesis is proven forever</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): impartial observation — previous experience (бұрынғы тәжірибе) әсер етпейтін completely neutral observation дегенді білдіреді.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. Vocabulary in context (значение по контексту): impartial observation — это completely neutral observation, не influenced by previous experience (не зависящее от прошлого опыта).
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Impartial observation — previous experience әсер етпейтін neutral observation.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Impartial observation means neutral observation not influenced by previous experience.</div>
                 </div>
               </div>
 
@@ -878,14 +1361,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q5" value="d"> D. Because what people observe is influenced by past knowledge and experience</label>
                   <label class="option"><input type="radio" name="sm-r1-q5" value="e"> E. Because all researchers must use the same method</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>D</b> дұрыс. Cause-effect (себеп-салдар байланысы): observation адамның already seen, learned немесе experienced нәрселері арқылы influenced болады.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>D</b> правильно. Cause-effect (причинно-следственная связь): observation influenced by what people have already seen, learned or experienced.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Observation past knowledge және experience арқылы influenced болады.</div>
+                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Observation is influenced by past knowledge and experience.</div>
                 </div>
               </div>
 
@@ -898,14 +1376,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q6" value="d"> D. They prevent researchers from testing predictions</label>
                   <label class="option"><input type="radio" name="sm-r1-q6" value="e"> E. They force all scientists to reach the same conclusion</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>B</b> дұрыс. Мәтінде hypothesis methodology-ға әсер етеді: кейбір observations relevant, кейбірі unrelated деп қаралады; бір method selected, басқа method rejected болады.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>B</b> правильно. В тексте сказано, что hypothesis affects methodology: some observations become relevant, others unrelated; one method is selected, another rejected.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Hypothesis observations, methods және experiments relevant екенін таңдауға әсер етеді.</div>
+                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Hypothesis helps decide which observations, methods and experiments are relevant.</div>
                 </div>
               </div>
 
@@ -918,14 +1391,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q7" value="d"> D. Ignore the results and repeat the same prediction</label>
                   <label class="option"><input type="radio" name="sm-r1-q7" value="e"> E. Accept the hypothesis as final proof</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>C</b> дұрыс. Мәтін бойынша predictions correct болмаса, hypothesis changed немесе rejected болуы керек.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>C</b> правильно. По тексту, if predictions are not correct, the hypothesis should be changed or rejected.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Predictions correct болмаса, hypothesis changed немесе rejected болуы керек.</div>
+                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. If predictions are not correct, the hypothesis should be changed or rejected.</div>
                 </div>
               </div>
 
@@ -938,14 +1406,9 @@
                   <label class="option"><input type="radio" name="sm-r1-q8" value="d"> D. How to Collect Facts Without Thinking</label>
                   <label class="option"><input type="radio" name="sm-r1-q8" value="e"> E. Why Researchers Should Reject All Hypotheses</label>
                 </div>
-
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk">
-                    <b>A</b> дұрыс. Best title (ең лайық тақырып) мәтіннің негізгі бөліктерін қамтиды: hypotheses, observation және scientific method.
-                  </div>
-                  <div class="lang-content" data-lang="ru">
-                    <b>A</b> правильно. Best title (лучшее название) охватывает главные части текста: hypotheses, observation and scientific method.
-                  </div>
+                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Best title hypotheses, observation және scientific method тақырыптарын қамтиды.</div>
+                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Best title covers hypotheses, observation and scientific method.</div>
                 </div>
               </div>
 
@@ -963,79 +1426,37 @@
           <div class="support-grid">
             <article class="vocab-card">
               <h3 class="card-title">Vocabulary</h3>
-
               <div class="vocab-grid">
-                <div class="vocab-row">
-                  <b>scientific method</b>
-                  <span>ғылыми әдіс</span>
-                  <span>научный метод</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>hypothesis</b>
-                  <span>гипотеза, ғылыми болжам</span>
-                  <span>гипотеза, научное предположение</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>observation</b>
-                  <span>бақылау</span>
-                  <span>наблюдение</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>inductive</b>
-                  <span>индуктивті</span>
-                  <span>индуктивный</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>hypothetico-deductive</b>
-                  <span>гипотетикалық-дедуктивті</span>
-                  <span>гипотетико-дедуктивный</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>methodology</b>
-                  <span>әдіснама</span>
-                  <span>методология</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>prediction</b>
-                  <span>болжам</span>
-                  <span>прогноз, предсказание</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>revise</b>
-                  <span>қайта қарау, түзету</span>
-                  <span>пересматривать, исправлять</span>
-                </div>
+                <div class="vocab-row"><b>scientific method</b><span>ғылыми әдіс</span><span>научный метод</span></div>
+                <div class="vocab-row"><b>hypothesis</b><span>гипотеза, ғылыми болжам</span><span>гипотеза, научное предположение</span></div>
+                <div class="vocab-row"><b>observation</b><span>бақылау</span><span>наблюдение</span></div>
+                <div class="vocab-row"><b>inductive</b><span>индуктивті</span><span>индуктивный</span></div>
+                <div class="vocab-row"><b>hypothetico-deductive</b><span>гипотетикалық-дедуктивті</span><span>гипотетико-дедуктивный</span></div>
+                <div class="vocab-row"><b>methodology</b><span>әдіснама</span><span>методология</span></div>
+                <div class="vocab-row"><b>prediction</b><span>болжам</span><span>прогноз</span></div>
+                <div class="vocab-row"><b>revise</b><span>қайта қарау, түзету</span><span>пересматривать, исправлять</span></div>
               </div>
             </article>
 
             <article class="strategy-card">
               <h3 class="card-title">Reading strategy</h3>
-
               <div class="lang-content" data-lang="kk">
                 <ul class="strategy-list">
                   <li>Main idea (негізгі ой) сұрағында scientific method (ғылыми әдіс) туралы жалпы пікірді таңда.</li>
-                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында терминнің айналасындағы explanation (түсіндірме) мен examples (мысалдар) ізде.</li>
-                  <li>Cause-effect (себеп-салдар байланысы) үшін because, therefore, influence, affect сияқты signal words (белгі сөздер) белгіле.</li>
-                  <li>Research text (зерттеу мәтіні) оқығанда hypothesis, observation, method және testing арасындағы логикалық байланысты түсін.</li>
+                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында explanation (түсіндірме) мен examples (мысалдар) ізде.</li>
+                  <li>Research text (зерттеу мәтіні) оқығанда hypothesis, observation, method және testing арасындағы байланысты түсін.</li>
                 </ul>
               </div>
-
               <div class="lang-content" data-lang="ru">
                 <ul class="strategy-list">
                   <li>В main idea (главная мысль) выбирай общее утверждение о scientific method (научном методе).</li>
-                  <li>В vocabulary in context (значение по контексту) ищи explanation (объяснение) и examples (примеры) рядом с термином.</li>
-                  <li>Для cause-effect (причинно-следственная связь) отмечай signal words (сигнальные слова): because, therefore, influence, affect.</li>
-                  <li>В research text (исследовательском тексте) понимай логическую связь между hypothesis, observation, method и testing.</li>
+                  <li>В vocabulary in context (значение по контексту) ищи explanation (объяснение) и examples (примеры).</li>
+                  <li>В research text (исследовательском тексте) понимай связь между hypothesis, observation, method и testing.</li>
                 </ul>
               </div>
             </article>
           </div>
         </div>
-          
+      </div>
+    </section>
+  
