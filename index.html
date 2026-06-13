@@ -23,9 +23,13 @@
       --radius: 28px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -293,15 +297,6 @@
       background: var(--card);
       border: 1px solid rgba(124, 58, 237, 0.13);
       box-shadow: 0 12px 32px rgba(88, 28, 135, 0.08);
-    }
-
-    .reading-title-card,
-    .reading-info-card,
-    .text-card,
-    .task-card,
-    .vocab-card,
-    .strategy-card,
-    .content-card {
       padding: 22px;
     }
 
@@ -622,21 +617,50 @@
           <p class="hero-desc">
             <span class="inline-lang" data-lang="kk">
               Бұл сайт Unit 2 тақырыптарына арналған: университет өмірі, шетелде оқу,
-              ғылыми әдіс және зерттеу жұмысы. Әр reading ішінде 8 сұрақ, 5 жауап нұсқасы
+              ғылыми әдіс, ғылым және қоғам, жастар мен инновация, танымал ғалымдар,
+              экология және техникалық прогресс. Әр reading ішінде 8 сұрақ, 5 жауап нұсқасы
               және әр сұрақтың астында түсіндірме беріледі.
             </span>
             <span class="inline-lang" data-lang="ru">
               Этот сайт посвящён Unit 2: университетская жизнь, обучение за рубежом,
-              научный метод и исследовательская работа. В каждом reading есть 8 вопросов,
+              научный метод, наука и общество, молодёжь и инновации, известные учёные,
+              экология и технический прогресс. В каждом reading есть 8 вопросов,
               5 вариантов ответа и объяснение под каждым вопросом.
             </span>
           </p>
 
           <div class="hero-grid">
-            <div class="mini-stat"><b>3</b><span>current reading texts</span></div>
-            <div class="mini-stat"><b>24</b><span>IELTS-style questions</span></div>
-            <div class="mini-stat"><b>5</b><span>options per question</span></div>
-            <div class="mini-stat"><b>KZ/RU</b><span>language mode</span></div>
+            <div class="mini-stat">
+              <b>5</b>
+              <span>
+                <span class="inline-lang" data-lang="kk">subunit тақырып</span>
+                <span class="inline-lang" data-lang="ru">subunit-тем</span>
+              </span>
+            </div>
+
+            <div class="mini-stat">
+              <b>10</b>
+              <span>
+                <span class="inline-lang" data-lang="kk">reading мәтін</span>
+                <span class="inline-lang" data-lang="ru">reading-текстов</span>
+              </span>
+            </div>
+
+            <div class="mini-stat">
+              <b>80</b>
+              <span>
+                <span class="inline-lang" data-lang="kk">IELTS-style сұрақ</span>
+                <span class="inline-lang" data-lang="ru">IELTS-style вопросов</span>
+              </span>
+            </div>
+
+            <div class="mini-stat">
+              <b>KZ/RU</b>
+              <span>
+                <span class="inline-lang" data-lang="kk">тіл режимі</span>
+                <span class="inline-lang" data-lang="ru">языковой режим</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -660,13 +684,37 @@
               <span class="inline-lang" data-lang="ru">Научная работа</span>
             </small>
           </a>
+
+          <a href="#subunit-2-3">
+            Unit 2.3
+            <small>
+              <span class="inline-lang" data-lang="kk">Ғылым жаңалықтары және жастар</span>
+              <span class="inline-lang" data-lang="ru">Новости науки и молодёжь</span>
+            </small>
+          </a>
+
+          <a href="#subunit-2-4">
+            Unit 2.4
+            <small>
+              <span class="inline-lang" data-lang="kk">Әлемге танымал ғалымдар</span>
+              <span class="inline-lang" data-lang="ru">Известные учёные</span>
+            </small>
+          </a>
+
+          <a href="#subunit-2-5">
+            Unit 2.5
+            <small>
+              <span class="inline-lang" data-lang="kk">Экология және техникалық прогресс</span>
+              <span class="inline-lang" data-lang="ru">Экология и технический прогресс</span>
+            </small>
+          </a>
         </nav>
       </div>
     </section>
-
-    <section class="section" id="subunit-2-1">
+        <section class="section" id="subunit-2-1">
       <div class="page-shell">
 
+        <!-- ================= UNIT 2.1 / READING 1 ================= -->
         <div class="reading-block" id="subunit-2-1-reading-1">
           <div class="reading-header">
             <div class="reading-title-card">
@@ -780,8 +828,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Main idea (негізгі ой) — gap year кейбір студенттерге education туралы ойланып, оқуға нақты purpose арқылы қайтуға көмектеседі.</div>
-                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Main idea (главная мысль): gap year помогает некоторым students вернуться к education с более clear purpose.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — gap year кейбір студенттерге education (білім) туралы ойланып, оқуға нақты purpose (мақсат) арқылы қайтуға көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea (главная мысль): gap year помогает некоторым students вернуться к education (образованию) с более clear purpose (ясной целью).
+                  </div>
                 </div>
               </div>
 
@@ -796,8 +848,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Definition (анықтама): gap year — school мен university арасындағы уақыт, онда жастар жаңа experience алады.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Definition (определение): gap year — время между school и university для new experiences.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Definition (анықтама) мәтінде берілген: gap year — school мен university арасындағы уақыт, онда жастар new, different or exciting experience іздейді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Definition (определение) есть в тексте: gap year — время между school и university для new, different or exciting experiences.
+                  </div>
                 </div>
               </div>
 
@@ -812,8 +868,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Specific detail (нақты ақпарат): gappers limited funds-ты supplementing үшін casual work алады.</div>
-                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. Specific detail (точная информация): gappers take casual work to supplement their limited funds.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Specific detail (нақты ақпарат): мәтінде gappers limited funds-ты supplementing үшін casual work алады деп жазылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Specific detail (точная информация): gappers take casual work to supplement their limited funds.
+                  </div>
                 </div>
               </div>
 
@@ -828,8 +888,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): reinvigorating — әлсіреген interest-ті қайта күшейту.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Vocabulary in context (значение по контексту): reinvigorating means renewing or giving new energy.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): reinvigorating lapsed or flagging interest — әлсіреген interest-ті қайта күшейту.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Vocabulary in context (значение по контексту): reinvigorating lapsed or flagging interest значит renewing/giving new energy.
+                  </div>
                 </div>
               </div>
 
@@ -844,8 +908,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Inference (қорытынды): 19 және 20 жастағы students higher education-ға көбірек кіріп жатыр.</div>
-                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Inference (вывод): рост числа 19- и 20-летних students показывает return to higher education after a break.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Inference (қорытынды жасау): 19 және 20 жастағы students higher education-ға көбірек кіріп жатыр, бұл break after school кейін оқуға қайтуды көрсетеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Inference (вывод): рост числа 19- и 20-летних students показывает, что more students enter higher education after a break.
+                  </div>
                 </div>
               </div>
 
@@ -860,8 +928,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Christine did not want to continue studying және higher education challenges too great болуы мүмкін деп worried болды.</div>
-                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Christine did not want to continue studying and worried that higher education challenges would be too great.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Мәтінде Christine did not want to continue studying және higher education challenges too great болуы мүмкін деп worried болғаны айтылады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. В тексте сказано, что Christine did not want to continue studying and worried that higher education challenges would be too great.
+                  </div>
                 </div>
               </div>
 
@@ -876,8 +948,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Christine right qualifications болмаса fewer work choices болатынын түсінді.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Christine realised that without the right qualifications people have fewer work choices.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Christine hairdressing өзі қалаған нәрсе емес екенін түсініп, right qualifications болмаса fewer work choices болатынын байқады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Christine поняла, что hairdressing was not quite what she wanted, and without the right qualifications people have fewer work choices.
+                  </div>
                 </div>
               </div>
 
@@ -892,8 +968,12 @@
                 </div>
 
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Best title (ең лайық тақырып) gap year, education-ға қайта оралу және purpose идеясын қамтиды.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Best title (лучшее название) охватывает gap year, return to education and purpose.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title (ең лайық тақырып) gap year, education-ға қайта оралу және new sense of purpose идеясын қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Best title (лучшее название) охватывает gap year, return to education и new sense of purpose.
+                  </div>
                 </div>
               </div>
 
@@ -907,42 +987,9 @@
               </div>
             </article>
           </div>
-
-          <div class="support-grid">
-            <article class="vocab-card">
-              <h3 class="card-title">Vocabulary</h3>
-              <div class="vocab-grid">
-                <div class="vocab-row"><b>higher education</b><span>жоғары білім</span><span>высшее образование</span></div>
-                <div class="vocab-row"><b>school leaver</b><span>мектеп бітіруші</span><span>выпускник школы</span></div>
-                <div class="vocab-row"><b>gap year</b><span>оқу арасындағы үзіліс жылы</span><span>год перерыва перед университетом</span></div>
-                <div class="vocab-row"><b>voluntary work</b><span>ерікті жұмыс</span><span>волонтёрская работа</span></div>
-                <div class="vocab-row"><b>casual work</b><span>уақытша жұмыс</span><span>временная работа</span></div>
-                <div class="vocab-row"><b>vocational qualification</b><span>кәсіби біліктілік</span><span>профессиональная квалификация</span></div>
-                <div class="vocab-row"><b>drop out</b><span>оқуды тастау</span><span>бросить учёбу</span></div>
-                <div class="vocab-row"><b>sense of purpose</b><span>мақсат сезімі</span><span>ощущение цели</span></div>
-              </div>
-            </article>
-
-            <article class="strategy-card">
-              <h3 class="card-title">Reading strategy</h3>
-              <div class="lang-content" data-lang="kk">
-                <ul class="strategy-list">
-                  <li>Main idea (негізгі ой) сұрағында жеке story емес, бүкіл passage (мәтін) идеясын таңда.</li>
-                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) үшін сөздің алдындағы және кейінгі сөйлемді оқы.</li>
-                  <li>Inference (қорытынды жасау) сұрағында figures (сандар) не көрсетіп тұрғанын түсін.</li>
-                </ul>
-              </div>
-              <div class="lang-content" data-lang="ru">
-                <ul class="strategy-list">
-                  <li>В main idea (главная мысль) выбирай не отдельную story, а идею всего passage (текста).</li>
-                  <li>Для vocabulary in context (значение по контексту) читай предложение до и после нужного слова.</li>
-                  <li>В inference (вывод) понимай, что показывают figures (цифры).</li>
-                </ul>
-              </div>
-            </article>
-          </div>
         </div>
 
+        <!-- ================= UNIT 2.1 / READING 2 ================= -->
         <div class="reading-block" id="subunit-2-1-reading-2">
           <div class="reading-header">
             <div class="reading-title-card">
@@ -964,6 +1011,7 @@
                   (экономикалық факторлар) туралы.
                 </p>
               </div>
+
               <div class="lang-content" data-lang="ru">
                 <p>
                   Этот reading text о studying English abroad (изучении английского за рубежом),
@@ -1035,14 +1083,19 @@
                   <label class="option"><input type="radio" name="ea-r2-q1" value="d"> D. Choices about studying English abroad are shaped by economic, cultural and national factors</label>
                   <label class="option"><input type="radio" name="ea-r2-q1" value="e"> E. Students never consider their parents’ opinions when studying abroad</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Main idea (негізгі ой) — destination choice economic factors, preconceptions, business connections және U.S. culture арқылы қалыптасады.</div>
-                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Main idea (главная мысль): choice of destination зависит от economic factors, preconceptions, business connections and U.S. culture.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Main idea (негізгі ой) — students’ choice of destination (оқу елін таңдау) economic factors, preconceptions, business connections және U.S. culture арқылы қалыптасады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Main idea (главная мысль): students’ choice of destination зависит от economic factors, preconceptions, business connections и U.S. culture.
+                  </div>
                 </div>
               </div>
 
               <div class="question" data-answer="b">
-                <p>2. Which countries are listed as the five most popular destinations?</p>
+                <p>2. Which countries are listed as the five most popular destinations for studying English abroad?</p>
                 <div class="options">
                   <label class="option"><input type="radio" name="ea-r2-q2" value="a"> A. Britain, Germany, France, Canada and Ireland</label>
                   <label class="option"><input type="radio" name="ea-r2-q2" value="b"> B. The United States, Britain, Australia, New Zealand and Canada</label>
@@ -1050,9 +1103,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q2" value="d"> D. Canada, Ireland, India, Britain and South Africa</label>
                   <label class="option"><input type="radio" name="ea-r2-q2" value="e"> E. The United States, Japan, Brazil, Canada and France</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Мәтінде five most popular destinations ретінде United States, Britain, Australia, New Zealand and Canada берілген.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Five most popular destinations: United States, Britain, Australia, New Zealand and Canada.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): мәтінде five most popular destinations ретінде the United States, Britain, Australia, New Zealand and Canada берілген.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Specific detail (точная информация): five most popular destinations — the United States, Britain, Australia, New Zealand and Canada.
+                  </div>
                 </div>
               </div>
 
@@ -1065,9 +1123,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q3" value="d"> D. The weather only</label>
                   <label class="option"><input type="radio" name="ea-r2-q3" value="e"> E. The distance from the student’s school</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Country of choice depends to a large extent on economic factors.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Country of choice depends to a large extent on economic factors.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Мәтінде country of choice depends to a large extent on economic factors деп нақты жазылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. В тексте прямо сказано: country of choice depends to a large extent on economic factors.
+                  </div>
                 </div>
               </div>
 
@@ -1080,9 +1143,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q4" value="d"> D. The exact cost of each course</label>
                   <label class="option"><input type="radio" name="ea-r2-q4" value="e"> E. Ideas or opinions formed before direct experience</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Preconceptions — ел туралы алдын ала қалыптасқан ideas немесе opinions.</div>
-                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. Preconceptions — ideas or opinions about a country before direct experience.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): preconceptions — students and parents ел туралы алдын ала қалыптастырған ideas (ойлар) немесе opinions (пікірлер).
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Vocabulary in context (значение по контексту): preconceptions — это ideas или opinions о стране, сформированные до личного опыта.
+                  </div>
                 </div>
               </div>
 
@@ -1095,9 +1163,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q5" value="d"> D. Parents never have preconceptions about other countries</label>
                   <label class="option"><input type="radio" name="ea-r2-q5" value="e"> E. Parents only consider climate when choosing a country</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Parents’ preconceptions amount they are prepared to spend-ке әсер етеді.</div>
-                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Parents’ preconceptions influence the amount they are prepared to spend.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Inference (қорытынды жасау): мәтінде parents’ preconceptions amount they are prepared to spend-ке influence етеді деп айтылады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Inference (вывод): parents’ preconceptions influence the amount they are prepared to spend.
+                  </div>
                 </div>
               </div>
 
@@ -1110,9 +1183,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q6" value="d"> D. They replace the need for English language classes</label>
                   <label class="option"><input type="radio" name="ea-r2-q6" value="e"> E. They prove that national patterns do not exist</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. International business connections students will seek tuition қайда екенін көрсетеді.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. International business connections indicate where students will seek tuition.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде international business connections gives a good indication of where students will seek tuition деп жазылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. В тексте сказано: international business connections give a good indication of where students will seek tuition.
+                  </div>
                 </div>
               </div>
 
@@ -1125,9 +1203,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q7" value="d"> D. A diverse mixture of nationalities</label>
                   <label class="option"><input type="radio" name="ea-r2-q7" value="e"> E. A single traditional pattern of study</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Heterogeneity “most diverse range of nationalities” дегенге қатысты.</div>
-                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Heterogeneity refers to “most diverse range of nationalities”.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): heterogeneity сөзі “most diverse range of nationalities” деген тіркеспен байланысты.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Vocabulary in context (значение по контексту): heterogeneity связано с “most diverse range of nationalities”.
+                  </div>
                 </div>
               </div>
 
@@ -1140,9 +1223,14 @@
                   <label class="option"><input type="radio" name="ea-r2-q8" value="d"> D. Because American English is never taught in schools</label>
                   <label class="option"><input type="radio" name="ea-r2-q8" value="e"> E. Because it has no connection with international business</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. U.S. economy, U.S. culture және American English-ке early exposure осыған әсер етеді.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. U.S. economy, U.S. culture and early exposure to American English explain this.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Мәтінде U.S. classrooms diverse болуы оның foremost economy ретіндегі pulling power-ына, U.S. culture focus-қа және American English пен accent ерте оқытылуына байланысты.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. В тексте diverse classrooms объясняются foremost economy, focus on U.S. culture и ранним знакомством с American English and accent.
+                  </div>
                 </div>
               </div>
 
@@ -1156,46 +1244,50 @@
               </div>
             </article>
           </div>
+        </div>
 
-          <div class="support-grid">
-            <article class="vocab-card">
-              <h3 class="card-title">Vocabulary</h3>
-              <div class="vocab-grid">
-                <div class="vocab-row"><b>international student</b><span>халықаралық студент</span><span>международный студент</span></div>
-                <div class="vocab-row"><b>destination</b><span>баратын ел, бағыт</span><span>направление, страна назначения</span></div>
-                <div class="vocab-row"><b>economic factors</b><span>экономикалық факторлар</span><span>экономические факторы</span></div>
-                <div class="vocab-row"><b>preconception</b><span>алдын ала қалыптасқан пікір</span><span>заранее сложившееся мнение</span></div>
-                <div class="vocab-row"><b>outlay</b><span>жұмсалатын ақша</span><span>расход, сумма затрат</span></div>
-                <div class="vocab-row"><b>tuition</b><span>оқыту, оқу ақысы</span><span>обучение / плата за обучение</span></div>
-                <div class="vocab-row"><b>heterogeneity</b><span>әртүрлілік</span><span>разнородность</span></div>
-                <div class="vocab-row"><b>accent</b><span>акцент</span><span>акцент</span></div>
-              </div>
-            </article>
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
 
-            <article class="strategy-card">
-              <h3 class="card-title">Reading strategy</h3>
-              <div class="lang-content" data-lang="kk">
-                <ul class="strategy-list">
-                  <li>Main idea (негізгі ой) сұрағында destination choice (оқу елін таңдау) қандай факторларға байланысты екенін анықта.</li>
-                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында difficult word (қиын сөз) алдындағы және кейінгі сөйлемге қара.</li>
-                  <li>Inference (қорытынды жасау) сұрағында parents, money және preconceptions арасындағы байланысты тап.</li>
-                </ul>
-              </div>
-              <div class="lang-content" data-lang="ru">
-                <ul class="strategy-list">
-                  <li>В main idea (главная мысль) определи, от каких факторов зависит destination choice (выбор страны обучения).</li>
-                  <li>В vocabulary in context (значение по контексту) смотри на предложение до и после difficult word (сложного слова).</li>
-                  <li>В inference (вывод) найди связь между parents, money и preconceptions.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>higher education</b><span>жоғары білім</span><span>высшее образование</span></div>
+              <div class="vocab-row"><b>school leaver</b><span>мектеп бітіруші</span><span>выпускник школы</span></div>
+              <div class="vocab-row"><b>gap year</b><span>оқу арасындағы үзіліс жылы</span><span>год перерыва перед университетом</span></div>
+              <div class="vocab-row"><b>international student</b><span>халықаралық студент</span><span>международный студент</span></div>
+              <div class="vocab-row"><b>destination</b><span>баратын ел, бағыт</span><span>направление, страна назначения</span></div>
+              <div class="vocab-row"><b>preconception</b><span>алдын ала қалыптасқан пікір</span><span>заранее сложившееся мнение</span></div>
+              <div class="vocab-row"><b>tuition</b><span>оқыту, оқу ақысы</span><span>обучение / плата за обучение</span></div>
+              <div class="vocab-row"><b>heterogeneity</b><span>әртүрлілік</span><span>разнородность</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында жеке story емес, бүкіл passage (мәтін) идеясын таңда.</li>
+                <li>Vocabulary in context (контекст арқылы сөз мағынасы) үшін сөздің алдындағы және кейінгі сөйлемді оқы.</li>
+                <li>Inference (қорытынды жасау) сұрағында figures (сандар) немесе cause-effect (себеп-салдар) байланысын түсін.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) выбирай не отдельную story, а идею всего passage (текста).</li>
+                <li>Для vocabulary in context (значение по контексту) читай предложение до и после нужного слова.</li>
+                <li>В inference (вывод) понимай figures (цифры) или cause-effect (причинно-следственную) связь.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-
-    <section class="section" id="subunit-2-2">
+        <section class="section" id="subunit-2-2">
       <div class="page-shell">
+
+        <!-- ================= UNIT 2.2 / READING 1 ================= -->
         <div class="reading-block" id="subunit-2-2-reading-1">
           <div class="reading-header">
             <div class="reading-title-card">
@@ -1216,6 +1308,7 @@
                   (гипотетикалық-дедуктивті әдіс), prediction (болжам) және testing (тексеру) туралы.
                 </p>
               </div>
+
               <div class="lang-content" data-lang="ru">
                 <p>
                   Этот reading text о scientific method (научном методе), hypothesis (гипотезе),
@@ -1301,9 +1394,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q1" value="d"> D. Observation is always independent from previous experience</label>
                   <label class="option"><input type="radio" name="sm-r1-q1" value="e"> E. The inductive method has solved every problem in science</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Main idea (негізгі ой) — scientific work көбіне hypothesis арқылы басталады, observation мен method таңдауға әсер етеді және testing арқылы тексеріледі.</div>
-                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. Main idea (главная мысль): scientific work often begins with hypothesis, guides observation and method, and must be tested.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — scientific work көбіне hypothesis (гипотеза) арқылы басталады; ол observation (бақылау) мен method (әдіс) таңдауға әсер етеді және testing (тексеру) арқылы дәлелденуі керек.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea (главная мысль): scientific work часто начинается с hypothesis (гипотезы), которая направляет observation (наблюдение) и method (метод), а затем проверяется через testing (проверку).
+                  </div>
                 </div>
               </div>
 
@@ -1316,9 +1414,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q2" value="d"> D. They are the same as final scientific proof</label>
                   <label class="option"><input type="radio" name="sm-r1-q2" value="e"> E. They are used only after all experiments are finished</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Hypotheses imaginative and inspiring деп сипатталады.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Hypotheses are described as imaginative and inspiring.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде hypotheses imaginative and inspiring деп сипатталады, өйткені олар researchers-ке known facts (белгілі фактілер) шегінен тыс ойлауға мүмкіндік береді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. В тексте hypotheses описаны как imaginative and inspiring, потому что они помогают researchers мыслить beyond known facts (за пределами известных фактов).
+                  </div>
                 </div>
               </div>
 
@@ -1331,9 +1434,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q3" value="d"> D. That scientific theories cannot change over time</label>
                   <label class="option"><input type="radio" name="sm-r1-q3" value="e"> E. That scientific theory begins with purely unbiased observation and facts</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>E</b> дұрыс. Myth бойынша scientific theory unbiased observation және facts арқылы басталады деп саналады.</div>
-                  <div class="lang-content" data-lang="ru"><b>E</b> правильно. The myth says scientific theory begins with unbiased observation and facts.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Specific detail (нақты ақпарат): myth бойынша scientific theory simple, unbiased және impartial observation арқылы басталады деп саналады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Specific detail (точная информация): myth утверждает, что scientific theory начинается с simple, unbiased and impartial observation.
+                  </div>
                 </div>
               </div>
 
@@ -1346,9 +1454,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q4" value="d"> D. Observation done without any method or purpose</label>
                   <label class="option"><input type="radio" name="sm-r1-q4" value="e"> E. Observation that happens only after a hypothesis is proven forever</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Impartial observation — previous experience әсер етпейтін neutral observation.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Impartial observation means neutral observation not influenced by previous experience.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): impartial observation — previous experience (бұрынғы тәжірибе) әсер етпейтін completely neutral observation дегенді білдіреді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Vocabulary in context (значение по контексту): impartial observation — это completely neutral observation, не influenced by previous experience (не зависящее от прошлого опыта).
+                  </div>
                 </div>
               </div>
 
@@ -1361,9 +1474,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q5" value="d"> D. Because what people observe is influenced by past knowledge and experience</label>
                   <label class="option"><input type="radio" name="sm-r1-q5" value="e"> E. Because all researchers must use the same method</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>D</b> дұрыс. Observation past knowledge және experience арқылы influenced болады.</div>
-                  <div class="lang-content" data-lang="ru"><b>D</b> правильно. Observation is influenced by past knowledge and experience.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Cause-effect (себеп-салдар байланысы): observation адамның already seen, learned немесе experienced нәрселері арқылы influenced болады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Cause-effect (причинно-следственная связь): observation influenced by what people have already seen, learned or experienced.
+                  </div>
                 </div>
               </div>
 
@@ -1376,9 +1494,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q6" value="d"> D. They prevent researchers from testing predictions</label>
                   <label class="option"><input type="radio" name="sm-r1-q6" value="e"> E. They force all scientists to reach the same conclusion</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>B</b> дұрыс. Hypothesis observations, methods және experiments relevant екенін таңдауға әсер етеді.</div>
-                  <div class="lang-content" data-lang="ru"><b>B</b> правильно. Hypothesis helps decide which observations, methods and experiments are relevant.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде hypothesis methodology-ға әсер етеді: кейбір observations relevant, кейбірі unrelated деп қаралады; бір method selected, басқа method rejected болады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. В тексте сказано, что hypothesis affects methodology: some observations become relevant, others unrelated; one method is selected, another rejected.
+                  </div>
                 </div>
               </div>
 
@@ -1391,9 +1514,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q7" value="d"> D. Ignore the results and repeat the same prediction</label>
                   <label class="option"><input type="radio" name="sm-r1-q7" value="e"> E. Accept the hypothesis as final proof</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>C</b> дұрыс. Predictions correct болмаса, hypothesis changed немесе rejected болуы керек.</div>
-                  <div class="lang-content" data-lang="ru"><b>C</b> правильно. If predictions are not correct, the hypothesis should be changed or rejected.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Мәтін бойынша predictions correct болмаса, hypothesis changed немесе rejected болуы керек.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. По тексту, if predictions are not correct, the hypothesis should be changed or rejected.
+                  </div>
                 </div>
               </div>
 
@@ -1406,9 +1534,14 @@
                   <label class="option"><input type="radio" name="sm-r1-q8" value="d"> D. How to Collect Facts Without Thinking</label>
                   <label class="option"><input type="radio" name="sm-r1-q8" value="e"> E. Why Researchers Should Reject All Hypotheses</label>
                 </div>
+
                 <div class="question-explanation">
-                  <div class="lang-content" data-lang="kk"><b>A</b> дұрыс. Best title hypotheses, observation және scientific method тақырыптарын қамтиды.</div>
-                  <div class="lang-content" data-lang="ru"><b>A</b> правильно. Best title covers hypotheses, observation and scientific method.</div>
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title (ең лайық тақырып) мәтіннің негізгі бөліктерін қамтиды: hypotheses, observation және scientific method.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Best title (лучшее название) охватывает главные части текста: hypotheses, observation and scientific method.
+                  </div>
                 </div>
               </div>
 
@@ -1422,44 +1555,9 @@
               </div>
             </article>
           </div>
-
-          <div class="support-grid">
-            <article class="vocab-card">
-              <h3 class="card-title">Vocabulary</h3>
-              <div class="vocab-grid">
-                <div class="vocab-row"><b>scientific method</b><span>ғылыми әдіс</span><span>научный метод</span></div>
-                <div class="vocab-row"><b>hypothesis</b><span>гипотеза, ғылыми болжам</span><span>гипотеза, научное предположение</span></div>
-                <div class="vocab-row"><b>observation</b><span>бақылау</span><span>наблюдение</span></div>
-                <div class="vocab-row"><b>inductive</b><span>индуктивті</span><span>индуктивный</span></div>
-                <div class="vocab-row"><b>hypothetico-deductive</b><span>гипотетикалық-дедуктивті</span><span>гипотетико-дедуктивный</span></div>
-                <div class="vocab-row"><b>methodology</b><span>әдіснама</span><span>методология</span></div>
-                <div class="vocab-row"><b>prediction</b><span>болжам</span><span>прогноз</span></div>
-                <div class="vocab-row"><b>revise</b><span>қайта қарау, түзету</span><span>пересматривать, исправлять</span></div>
-              </div>
-            </article>
-
-            <article class="strategy-card">
-              <h3 class="card-title">Reading strategy</h3>
-              <div class="lang-content" data-lang="kk">
-                <ul class="strategy-list">
-                  <li>Main idea (негізгі ой) сұрағында scientific method (ғылыми әдіс) туралы жалпы пікірді таңда.</li>
-                  <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында explanation (түсіндірме) мен examples (мысалдар) ізде.</li>
-                  <li>Research text (зерттеу мәтіні) оқығанда hypothesis, observation, method және testing арасындағы байланысты түсін.</li>
-                </ul>
-              </div>
-              <div class="lang-content" data-lang="ru">
-                <ul class="strategy-list">
-                  <li>В main idea (главная мысль) выбирай общее утверждение о scientific method (научном методе).</li>
-                  <li>В vocabulary in context (значение по контексту) ищи explanation (объяснение) и examples (примеры).</li>
-                  <li>В research text (исследовательском тексте) понимай связь между hypothesis, observation, method и testing.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
         </div>
-      </div>
-    </section>
-          <!-- ================= UNIT 2.2 / READING 2 ================= -->
+
+        <!-- ================= UNIT 2.2 / READING 2 ================= -->
         <div class="reading-block" id="subunit-2-2-reading-2">
           <div class="reading-header">
             <div class="reading-title-card">
@@ -1724,82 +1822,43 @@
               </div>
             </article>
           </div>
-
-          <div class="support-grid">
-            <article class="vocab-card">
-              <h3 class="card-title">Vocabulary</h3>
-
-              <div class="vocab-grid">
-                <div class="vocab-row">
-                  <b>scientific progress</b>
-                  <span>ғылыми прогресс</span>
-                  <span>научный прогресс</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>adaptability</b>
-                  <span>бейімделу қабілеті</span>
-                  <span>способность к адаптации</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>transformation</b>
-                  <span>үлкен өзгеріс</span>
-                  <span>преобразование, трансформация</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>extinct</b>
-                  <span>жойылып кеткен</span>
-                  <span>вымерший</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>environment</b>
-                  <span>қоршаған орта</span>
-                  <span>окружающая среда</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>unprecedented</b>
-                  <span>бұрын-соңды болмаған</span>
-                  <span>беспрецедентный</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>inevitability</b>
-                  <span>болмай қоймайтындық</span>
-                  <span>неизбежность</span>
-                </div>
-
-                <div class="vocab-row">
-                  <b>institution</b>
-                  <span>қоғамдық институт</span>
-                  <span>общественный институт</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="strategy-card">
-              <h3 class="card-title">Reading strategy</h3>
-
-              <div class="lang-content" data-lang="kk">
-                <ul class="strategy-list">
-                  <li>Main idea (негізгі ой) сұрағында science (ғылым), human life (адам өмірі) және adaptation (бейімделу) арасындағы байланысты тап.</li>
-                  <li>Purpose question (мақсат сұрағы) үшін author (автор) мысалды не үшін келтіргенін ойла: dinosaurs example adaptation идеясын түсіндіреді.</li>
-                  <li>Inference (қорытынды жасау) сұрағында тура сөйлемді емес, logical meaning (логикалық мағына)-ны таңда.</li>
-                  <li>Cause-effect (себеп-салдар байланысы) үшін because, due to, whether, result, adjust сияқты signal words (белгі сөздер)-ге қара.</li>
-                </ul>
-              </div>
-
-              <div class="lang-content" data-lang="ru">
-                <ul class="strategy-list">
-                  <li>В main idea (главная мысль) найди связь между science (наукой), human life (жизнью человека) и adaptation (адаптацией).</li>
-                  <li>В purpose question (вопрос на цель) подумай, зачем author (автор) использует пример: dinosaurs example объясняет adaptation.</li>
-                  <li>В inference (вывод) выбирай не прямую фразу, а logical meaning (логический смысл).</li>
-                  <li>Для cause-effect (причинно-следственная связь) отмечай signal words (сигнальные слова): because, due to, whether, result, adjust.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
         </div>
+
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
+
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>scientific method</b><span>ғылыми әдіс</span><span>научный метод</span></div>
+              <div class="vocab-row"><b>hypothesis</b><span>гипотеза, ғылыми болжам</span><span>гипотеза, научное предположение</span></div>
+              <div class="vocab-row"><b>observation</b><span>бақылау</span><span>наблюдение</span></div>
+              <div class="vocab-row"><b>methodology</b><span>әдіснама</span><span>методология</span></div>
+              <div class="vocab-row"><b>scientific progress</b><span>ғылыми прогресс</span><span>научный прогресс</span></div>
+              <div class="vocab-row"><b>adaptability</b><span>бейімделу қабілеті</span><span>способность к адаптации</span></div>
+              <div class="vocab-row"><b>transformation</b><span>үлкен өзгеріс</span><span>преобразование</span></div>
+              <div class="vocab-row"><b>institution</b><span>қоғамдық институт</span><span>общественный институт</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында scientific method (ғылыми әдіс), society (қоғам) және adaptation (бейімделу) арасындағы жалпы ойды таңда.</li>
+                <li>Vocabulary in context (контекст арқылы сөз мағынасы) сұрағында терминнің алдындағы және кейінгі explanation (түсіндірме)-ге қара.</li>
+                <li>Purpose question (мақсат сұрағы) үшін author (автор) мысалды не үшін қолданғанын түсін.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) выбирай общую идею о scientific method (научном методе), society (обществе) и adaptation (адаптации).</li>
+                <li>В vocabulary in context (значение по контексту) смотри на explanation (объяснение) до и после термина.</li>
+                <li>В purpose question (вопрос на цель) понимай, зачем author (автор) использует пример.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
