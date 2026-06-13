@@ -1862,3 +1862,107 @@
         </div>
       </div>
     </section>
+      <script>
+    function switchLanguage(lang) {
+      document.body.classList.remove("lang-kk", "lang-ru");
+      document.body.classList.add("lang-" + lang);
+
+      document.querySelectorAll(".lang-btn").forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+
+      document.querySelectorAll('[data-set-lang="' + lang + '"]').forEach(function(btn) {
+        btn.classList.add("active");
+      });
+
+      try {
+        localStorage.setItem("readingLang", lang);
+      } catch (e) {}
+    }
+
+    function checkTest(testId) {
+      const testBox = document.querySelector('[data-test="' + testId + '"]');
+      const resultBox = document.querySelector('[data-result="' + testId + '"]');
+
+      if (!testBox || !resultBox) return;
+
+      const questions = testBox.querySelectorAll(".question");
+      let score = 0;
+
+      questions.forEach(function(question) {
+        const correctAnswer = question.getAttribute("data-answer");
+        const selected = question.querySelector('input[type="radio"]:checked');
+
+        question.querySelectorAll(".option").forEach(function(option) {
+          option.classList.remove("correct", "wrong");
+
+          const input = option.querySelector("input");
+          if (!input) return;
+
+          if (input.value === correctAnswer) {
+            option.classList.add("correct");
+          }
+
+          if (selected && input.checked && input.value !== correctAnswer) {
+            option.classList.add("wrong");
+          }
+        });
+
+        const explanation = question.querySelector(".question-explanation");
+        if (explanation) {
+          explanation.classList.add("show");
+        }
+
+        if (selected && selected.value === correctAnswer) {
+          score++;
+        }
+      });
+
+      const oldScore = resultBox.querySelector(".score-line");
+      if (oldScore) oldScore.remove();
+
+      const scoreLine = document.createElement("div");
+      scoreLine.className = "score-line";
+      scoreLine.innerHTML =
+        '<span class="inline-lang" data-lang="kk">Нәтиже: ' + score + ' / ' + questions.length + '</span>' +
+        '<span class="inline-lang" data-lang="ru">Результат: ' + score + ' / ' + questions.length + '</span>';
+
+      resultBox.prepend(scoreLine);
+      resultBox.classList.add("show");
+
+      const currentLang = document.body.classList.contains("lang-ru") ? "ru" : "kk";
+      switchLanguage(currentLang);
+
+      resultBox.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll("[data-set-lang]").forEach(function(button) {
+        button.addEventListener("click", function() {
+          const lang = button.getAttribute("data-set-lang");
+          switchLanguage(lang);
+        });
+      });
+
+      let savedLang = "kk";
+      try {
+        savedLang = localStorage.getItem("readingLang") || "kk";
+      } catch (e) {}
+
+      if (savedLang !== "kk" && savedLang !== "ru") {
+        savedLang = "kk";
+      }
+
+      switchLanguage(savedLang);
+
+      document.querySelectorAll("[data-check]").forEach(function(button) {
+        button.addEventListener("click", function() {
+          const testId = button.getAttribute("data-check");
+          checkTest(testId);
+        });
+      });
+    });
+  </script>
